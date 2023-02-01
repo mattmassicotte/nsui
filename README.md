@@ -30,10 +30,10 @@ NSUITextStorageEditActions
 
 ```swift
 public protocol NSUIViewRepresentable {
-	associatedtype NSUIViewType
+    associatedtype NSUIViewType
 
-	func makeNSUIView(context: Context) -> NSUIViewType
-	func updateNSUIView(_ view: NSUIViewType, context: Context)
+    func makeNSUIView(context: Context) -> NSUIViewType
+    func updateNSUIView(_ view: NSUIViewType, context: Context)
 }
 ```
 
