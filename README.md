@@ -1,3 +1,4 @@
+[![Build Status][build status badge]][build status]
 [![License][license badge]][license]
 
 # NSUI
@@ -48,5 +49,7 @@ I'd love to hear from you! Get in touch via [mastodon](https://mastodon.social/m
 
 By participating in this project you agree to abide by the [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 
+[build status]: https://github.com/mattmassicotte/nsui/actions
+[build status badge]: https://github.com/mattmassicotte/nsui/workflows/CI/badge.svg
 [license]: https://opensource.org/licenses/BSD-3-Clause
 [license badge]: https://img.shields.io/github/license/mattmassicotte/nsui
