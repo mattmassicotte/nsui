@@ -20,6 +20,7 @@ dependencies: [
 ## Types
 
 ```
+NSUIColor
 NSUITextView
 NSUITextStorageEditActions
 ```
