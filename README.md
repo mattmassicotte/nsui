@@ -29,3 +29,6 @@ NSUITextStorageEditActions
 I'd love to hear from you! Get in touch via [mastodon](https://mastodon.social/mattiem), an issue, or a pull request.
 
 By participating in this project you agree to abide by the [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+
+[license]: https://opensource.org/licenses/BSD-3-Clause
+[license badge]: https://img.shields.io/github/license/mattmassicotte/nsui
