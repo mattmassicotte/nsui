@@ -21,11 +21,15 @@ dependencies: [
 ## Types
 
 ```
+NSUIApplication
+NSUIApplicationDelegate
+NSUIApplicationDelegateAdaptor
 NSUIColor
 NSUIHostingController
 NSUITextView
 NSUITextStorageEditActions
 NSUIViewController
+
 ```
 
 ## Protocols
