@@ -24,6 +24,17 @@ NSUITextView
 NSUITextStorageEditActions
 ```
 
+## Protocols
+
+```swift
+public protocol NSUIViewRepresentable {
+	associatedtype NSUIViewType
+
+	func makeNSUIView(context: Context) -> NSUIViewType
+	func updateNSUIView(_ view: NSUIViewType, context: Context)
+}
+```
+
 ## Contributing and Collaboration
 
 I prefer collaboration, and would love to find ways to work together if you have a similar project.

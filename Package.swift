@@ -6,8 +6,8 @@ let package = Package(
     name: "NSUI",
 	platforms: [
 		.macOS(.v10_15),
-		.iOS(.v11),
-		.tvOS(.v11),
+		.iOS(.v13),
+		.tvOS(.v13),
 	],
     products: [
         .library(name: "NSUI", targets: ["NSUI"]),

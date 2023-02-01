@@ -16,9 +16,7 @@ public extension NSTextView {
 	}
 }
 
-#endif
-
-#if canImport(UIKit)
+#elseif canImport(UIKit)
 import UIKit
 
 public typealias NSUITextStorageEditActions = NSTextStorage.EditActions
