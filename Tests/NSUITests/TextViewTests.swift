@@ -1,7 +1,7 @@
 import XCTest
 @testable import NSUI
 
-final class nsuiTests: XCTestCase {
+final class TextViewTests: XCTestCase {
     func testTextViewText() throws {
         let textView = NSUITextView()
 

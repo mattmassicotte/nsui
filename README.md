@@ -22,8 +22,10 @@ dependencies: [
 
 ```
 NSUIColor
+NSUIHostingController
 NSUITextView
 NSUITextStorageEditActions
+NSUIViewController
 ```
 
 ## Protocols
