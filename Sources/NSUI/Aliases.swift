@@ -22,6 +22,6 @@ public typealias NSUIApplicationDelegateAdaptor = UIApplicationDelegateAdaptor
 public typealias NSUIColor = UIColor
 public typealias NSUILongPressGestureRecognizer = UILongPressGestureRecognizer
 public typealias NSUITapGestureRecognizer = UITapGestureRecognizer
-public typealias NSUIWorkspace = UIWorkspace
+public typealias NSUIWorkspace = UIApplication
 
 #endif
