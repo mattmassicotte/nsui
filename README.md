@@ -26,10 +26,12 @@ NSUIApplicationDelegate
 NSUIApplicationDelegateAdaptor
 NSUIColor
 NSUIHostingController
-NSUITextView
+NSUILongPressGestureRecognizer
+NSUITapGestureRecognizer
 NSUITextStorageEditActions
+NSUITextView
 NSUIViewController
-
+NSUIWorkspace
 ```
 
 ## Protocols
