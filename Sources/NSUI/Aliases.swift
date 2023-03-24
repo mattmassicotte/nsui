@@ -24,6 +24,7 @@ public typealias NSUIColor = UIColor
 public typealias NSUILongPressGestureRecognizer = UILongPressGestureRecognizer
 public typealias NSUITapGestureRecognizer = UITapGestureRecognizer
 public typealias NSUIWorkspace = UIApplication
+@available(tvOS, unavailable)
 public typealias NSUIPasteboard = UIPasteboard
 
 #endif
