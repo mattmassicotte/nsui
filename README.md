@@ -1,5 +1,6 @@
 [![Build Status][build status badge]][build status]
 [![License][license badge]][license]
+[![Platforms][platforms badge]][platforms]
 
 # NSUI
 AppKit and UIKit without conditional compilation
@@ -62,3 +63,5 @@ By participating in this project you agree to abide by the [Contributor Code of 
 [build status badge]: https://github.com/mattmassicotte/nsui/workflows/CI/badge.svg
 [license]: https://opensource.org/licenses/BSD-3-Clause
 [license badge]: https://img.shields.io/github/license/mattmassicotte/nsui
+[platforms]: https://swiftpackageindex.com/mattmassicotte/nsui
+[platforms badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fmattmassicotte%2Fnsui%2Fbadge%3Ftype%3Dplatforms
