@@ -11,6 +11,7 @@ public typealias NSUIColor = NSColor
 public typealias NSUILongPressGestureRecognizer = NSPressGestureRecognizer
 public typealias NSUITapGestureRecognizer = NSClickGestureRecognizer
 public typealias NSUIWorkspace = NSWorkspace
+public typealias NSUIPasteboard = NSPasteboard
 
 #elseif canImport(UIKit)
 import UIKit
@@ -23,5 +24,6 @@ public typealias NSUIColor = UIColor
 public typealias NSUILongPressGestureRecognizer = UILongPressGestureRecognizer
 public typealias NSUITapGestureRecognizer = UITapGestureRecognizer
 public typealias NSUIWorkspace = UIApplication
+public typealias NSUIPasteboard = UIPasteboard
 
 #endif

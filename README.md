@@ -32,6 +32,7 @@ NSUITextStorageEditActions
 NSUITextView
 NSUIViewController
 NSUIWorkspace
+NSUIPasteboard
 ```
 
 ## Protocols
