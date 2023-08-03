@@ -29,13 +29,13 @@ NSUIColor
 NSUIHostingController
 NSUIImage
 NSUILongPressGestureRecognizer
+NSUIPasteboard
+NSUIResponder
 NSUITapGestureRecognizer
 NSUITextStorageEditActions
 NSUITextView
 NSUIViewController
 NSUIWorkspace
-NSUIPasteboard
-NSUIResponder
 ```
 
 ## Protocols
