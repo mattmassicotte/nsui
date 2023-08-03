@@ -34,6 +34,7 @@ NSUITextView
 NSUIViewController
 NSUIWorkspace
 NSUIPasteboard
+NSUIResponder
 ```
 
 ## Protocols
