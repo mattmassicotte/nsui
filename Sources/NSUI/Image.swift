@@ -18,7 +18,7 @@ extension Image {
 
 #if canImport(AppKit)
 extension NSImage {
-    var cgImage: CGImage? {
+    public var cgImage: CGImage? {
         guard let imageData = self.tiffRepresentation,
            let bitmap = NSBitmapImageRep(data: imageData) else {
             return nil
