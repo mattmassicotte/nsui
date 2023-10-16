@@ -27,6 +27,7 @@ NSUIApplicationDelegate
 NSUIApplicationDelegateAdaptor
 NSUIColor
 NSUIHostingController
+NSUIImage
 NSUILongPressGestureRecognizer
 NSUITapGestureRecognizer
 NSUITextStorageEditActions
