@@ -16,6 +16,18 @@ extension Image {
     }
 }
 
+@available(iOS 16.0, macOS 13.0, *)
+extension ImageRenderer {
+    @MainActor
+    public var nsuiImage: NSUIImage? {
+        #if canImport(AppKit)
+        return nsImage
+        #elseif canImport(UIKit)
+        return uiImage
+        #endif
+    }
+}
+
 #if canImport(AppKit)
 extension NSImage {
     public var cgImage: CGImage? {
