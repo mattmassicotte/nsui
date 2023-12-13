@@ -7,13 +7,13 @@ public typealias NSUIImage = UIImage
 #endif
 
 extension Image {
-    public init(nsuiImage: NSUIImage) {
+	public init(nsuiImage: NSUIImage) {
 #if canImport(AppKit)
-            self.init(nsImage: nsuiImage)
+		self.init(nsImage: nsuiImage)
 #elseif canImport(UIKit)
-            self.init(uiImage: nsuiImage)
+		self.init(uiImage: nsuiImage)
 #endif
-    }
+	}
 }
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
