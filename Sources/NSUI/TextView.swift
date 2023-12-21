@@ -7,8 +7,6 @@ public extension NSTextStorage {
 
 public typealias NSUITextStorageEditActions = NSTextStorageEditActions
 
-public typealias NSUITextView = NSTextView
-
 public extension NSTextView {
 	var text: String {
 		get { return string }
@@ -20,7 +18,5 @@ public extension NSTextView {
 import UIKit
 
 public typealias NSUITextStorageEditActions = NSTextStorage.EditActions
-
-public typealias NSUITextView = UITextView
 
 #endif
