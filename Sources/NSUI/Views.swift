@@ -9,6 +9,17 @@ extension NSUIResponder {
 	}
 }
 
+extension NSUIActivityIndicatorView {
+    public func startAnimating() {
+        self.startAnimation(nil)
+    }
+    
+    public func stopAnimating() {
+        self.stopAnimation(nil)
+    }
+}
+
+
 #elseif canImport(UIKit)
 import UIKit
 

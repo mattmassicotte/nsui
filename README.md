@@ -24,19 +24,39 @@ dependencies: [
 ```
 
 ## Types
+All Types and their `UIKit` & `AppKit` correspondance are defined in the `Aliases.swift` file. That file only defines the 
+NSUI type corresponding to the proper platform. 
 
+Here's the current list of types supported in NSUI: 
 ```
+NSUIActivityIndicatorView
 NSUIApplication
 NSUIApplicationDelegate
 NSUIApplicationDelegateAdaptor
+
+// Collection Views
+NSUICollectionDataSource
+NSUICollectionView
+NSUICollectionViewItem
+NSUICollectionViewDelegate
+NSUICollectionViewLayout
+NSUICollectionViewFlowLayout
+NSUICollectionViewLayoutAttributes
+NSUICollectionViewDelegateFlowLayout
+
 NSUIColor
+NSUIEdgeInsets
+NSUIFont
 NSUIHostingController
 NSUIImage
 NSUILongPressGestureRecognizer
+NSUINib
 NSUIPasteboard
 NSUIResponder
 NSUITapGestureRecognizer
 NSUITextStorageEditActions
+NSUITextField
+NSUITextFieldDelegate
 NSUITextView
 NSUIViewController
 NSUIWorkspace
@@ -52,6 +72,33 @@ public protocol NSUIViewRepresentable {
     func updateNSUIView(_ view: NSUIViewType, context: Context)
 }
 ```
+
+## Conventions
+NSUI is not a multi-platform framework to replace both UIKit and AppKit. As stated above, `NSUI` takes the stance that
+the API from `UIKit` is the first-class citizen. However, in some cases, both AppKit and UIKit are very close to each other. 
+
+Let's take, for example, the `NSProgressIndicator` and `UIActivityIndicator` classes. To start the spinning indicator view, you need to 
+issue `startAnimating()` for UIKit and `startAnimation(sender:)` for AppKit.
+
+In order to bridge that slight difference, a bridging function is created in the `Views.swift` file which looks like this: 
+```swift
+extension NSUIActivityIndicator {
+    public func startAnimating() {
+        self.startAnimation(nil)
+    }
+    
+    public func stopAnimating() {
+        self.stopAnimation(nil)
+    }
+}
+```
+This extension is wrapped within a: `#if canImport(AppKit)` and provides the `UIKit` functional equivalent to the `AppKit` class. 
+
+## Enhancing `NSUI`
+If you need to enhance `NSUI`, follow the following guidelines:
+1- Check if the type you need is defined in the `Aliases.swift` file. If not, add it there
+2- If your type, needs to supply a bridging `var` or `func`, define that in a proper swift file.
+3- Always prioritize the `UIKit` naming scheme when defining new bridging `var` or `func`.  
 
 ## Contributing and Collaboration
 
