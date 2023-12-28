@@ -49,7 +49,7 @@ public typealias NSUIApplicationDelegateAdaptor = UIApplicationDelegateAdaptor
 // Collection View
 public typealias NSUICollectionDataSource = UICollectionViewDataSource
 public typealias NSUICollectionView = UICollectionView
-public typealias NSUICollectionViewItem = UICollectionViewItem
+public typealias NSUICollectionViewItem = UICollectionViewCell
 public typealias NSUICollectionViewDelegate = UICollectionViewDelegate
 public typealias NSUICollectionViewLayout = UICollectionViewLayout
 public typealias NSUICollectionViewFlowLayout = UICollectionViewFlowLayout
