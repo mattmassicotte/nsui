@@ -1,14 +1,8 @@
 import SwiftUI
 
 #if canImport(AppKit)
-public typealias NSUIImageView = NSImageView
-#elseif canImport(UIKit)
-public typealias NSUIImageView = UIImageView
-#endif
-
-#if canImport(AppKit)
-extension NSImageView {
-    public func tintColor(color: NSUIColor) {
+public extension NSImageView {
+    func tintColor(color: NSUIColor) {
         guard
             let selfImage = self.image
         else { return }
