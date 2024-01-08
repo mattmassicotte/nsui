@@ -62,6 +62,8 @@ NSUIViewController
 NSUIWorkspace
 ```
 
+If you are looking for event key mappings, particularly `UIKeyboardHIDUsage` and `UIKeyModifierFlags, check out [KeyCodes](https://github.com/ChimeHQ/KeyCodes).
+
 ## Protocols
 
 ```swift
