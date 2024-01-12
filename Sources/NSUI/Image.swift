@@ -2,7 +2,7 @@ import SwiftUI
 
 
 extension Image {
-#if canImport(AppKit)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 	public init(nsuiImage: NSUIImage) {
 		self.init(nsImage: nsuiImage)
 	}
@@ -17,7 +17,7 @@ extension Image {
 extension ImageRenderer {
 	@MainActor
 	public var nsuiImage: NSUIImage? {
-#if canImport(AppKit)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 		return nsImage
 #elseif canImport(UIKit)
 		return uiImage
@@ -27,7 +27,7 @@ extension ImageRenderer {
 	}
 }
 
-#if canImport(AppKit)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 extension NSImage {
 	public var cgImage: CGImage? {
 		guard

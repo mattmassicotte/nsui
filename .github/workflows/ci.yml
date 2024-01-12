@@ -16,17 +16,16 @@ on:
 jobs:
   test:
     name: Test
-    runs-on: macOS-latest
+    runs-on: macOS-13
     strategy:
       matrix:
         destination:
           - "platform=macOS"
+          - "platform=macOS,variant=Mac Catalyst"
           - "platform=iOS Simulator,name=iPhone 11"
           - "platform=tvOS Simulator,name=Apple TV"
 
     steps:
       - uses: actions/checkout@v4
-      - name: Install XCBeautify
-        run: brew install xcbeautify
       - name: Test platform ${{ matrix.destination }}
         run: set -o pipefail && xcodebuild -scheme NSUI -destination "${{ matrix.destination }}" test | xcbeautify --renderer github-actions
