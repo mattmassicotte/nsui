@@ -13,6 +13,9 @@ on:
     branches:
       - main
 
+env:
+  DEVELOPER_DIR: /Applications/Xcode_15.2.app/Contents/Developer
+
 jobs:
   test:
     name: Test
@@ -24,8 +27,9 @@ jobs:
           - "platform=macOS,variant=Mac Catalyst"
           - "platform=iOS Simulator,name=iPhone 11"
           - "platform=tvOS Simulator,name=Apple TV"
+          - "platform=visionOS Simulator,name=Apple Vision Pro"
 
     steps:
       - uses: actions/checkout@v4
       - name: Test platform ${{ matrix.destination }}
-        run: set -o pipefail && xcodebuild -scheme NSUI -destination "${{ matrix.destination }}" test | xcbeautify --renderer github-actions
+        run: set -o pipefail && xcodebuild -scheme NSUI -destination "${{ matrix.destination }}" test | xcbeautify
