@@ -44,6 +44,7 @@ NSUICollectionViewFlowLayout
 NSUICollectionViewLayoutAttributes
 NSUICollectionViewDelegateFlowLayout
 
+NSUIButton
 NSUIColor
 NSUIEdgeInsets
 NSUIFont
@@ -53,6 +54,8 @@ NSUILongPressGestureRecognizer
 NSUINib
 NSUIPasteboard
 NSUIResponder
+NSUIStackView
+NSUIStoryboard
 NSUITapGestureRecognizer
 NSUITextStorageEditActions
 NSUITextField

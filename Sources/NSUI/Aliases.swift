@@ -9,6 +9,9 @@ public typealias NSUIApplicationDelegate = NSApplicationDelegate
 @available(macOS 11.0, *)
 public typealias NSUIApplicationDelegateAdaptor = NSApplicationDelegateAdaptor
 
+// Storyboard
+public typealias NSUIStoryboard = NSStoryboard
+
 // Collection View
 public typealias NSUICollectionDataSource = NSCollectionViewDataSource
 public typealias NSUICollectionView = NSCollectionView
@@ -30,10 +33,14 @@ public typealias NSUINib = NSNib
 public typealias NSUIPasteboard = NSPasteboard
 public typealias NSUIResponder = NSResponder
 public typealias NSUITapGestureRecognizer = NSClickGestureRecognizer
+
+// Views
+public typealias NSUIButton = NSButton
 public typealias NSUITextField = NSTextField
 public typealias NSUITextFieldDelegate = NSTextFieldDelegate
 public typealias NSUITextView = NSTextView
 public typealias NSUIView = NSView
+public typealias NSUIStackView = NSStackView
 public typealias NSUIViewController = NSViewController
 public typealias NSUIHostingController = NSHostingController
 public typealias NSUIWorkspace = NSWorkspace
@@ -46,6 +53,9 @@ public typealias NSUIApplication = UIApplication
 public typealias NSUIApplicationDelegate = UIApplicationDelegate
 @available(iOS 14.0, tvOS 14.0, *)
 public typealias NSUIApplicationDelegateAdaptor = UIApplicationDelegateAdaptor
+
+// Storyboard
+public typealias NSUIStoryboard = UIStoryboard
 
 // Collection View
 public typealias NSUICollectionDataSource = UICollectionViewDataSource
@@ -70,10 +80,14 @@ public typealias NSUINib = UINib
 public typealias NSUIPasteboard = UIPasteboard
 public typealias NSUIResponder = UIResponder
 public typealias NSUITapGestureRecognizer = UITapGestureRecognizer
+
+// Views
+public typealias NSUIButton = UIButton
 public typealias NSUITextField = UITextField
 public typealias NSUITextFieldDelegate = UITextFieldDelegate
 public typealias NSUITextView = UITextView
 public typealias NSUIView = UIView
+public typealias NSUIStackView = UIStackView
 public typealias NSUIViewController = UIViewController
 public typealias NSUIHostingController = UIHostingController
 public typealias NSUIWorkspace = UIApplication
