@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 extension Image {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
 	public init(nsuiImage: NSUIImage) {
