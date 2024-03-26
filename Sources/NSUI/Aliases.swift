@@ -55,6 +55,7 @@ public typealias NSUIApplicationDelegate = UIApplicationDelegate
 public typealias NSUIApplicationDelegateAdaptor = UIApplicationDelegateAdaptor
 
 // Storyboard
+@available(visionOS, introduced: 1.0, deprecated)
 public typealias NSUIStoryboard = UIStoryboard
 
 // Collection View
@@ -75,6 +76,7 @@ public typealias NSUIImage = UIImage
 public typealias NSUIImageView = UIImageView
 public typealias NSUILabel = UILabel
 public typealias NSUILongPressGestureRecognizer = UILongPressGestureRecognizer
+@available(visionOS, introduced: 1.0, deprecated)
 public typealias NSUINib = UINib
 
 @available(tvOS, unavailable)
