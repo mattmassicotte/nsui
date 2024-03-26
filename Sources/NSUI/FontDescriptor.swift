@@ -3,8 +3,11 @@ import AppKit
 
 typealias NSUIFontDescriptor = NSFontDescriptor
 extension NSUIFontDescriptor.SymbolicTraits {
-	static let traitItalic = Self.italic
-	static let traitBold = Self.bold
+	public static let traitItalic = Self.italic
+	public static let traitBold = Self.bold
+	public static let traitExpanded = Self.expanded
+	public static let traitCondensed = Self.condensed
+	public static let traitMonoSpace = Self.monoSpace
 }
 
 #endif
