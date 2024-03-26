@@ -70,6 +70,7 @@ public typealias NSUICollectionViewDelegateFlowLayout = UICollectionViewDelegate
 public typealias NSUIColor = UIColor
 public typealias NSUIEdgeInsets = UIEdgeInsets
 public typealias NSUIFont = UIFont
+public typealias NSUIFontDescriptor = UIFontDescriptor
 public typealias NSUIImage = UIImage
 public typealias NSUIImageView = UIImageView
 public typealias NSUILabel = UILabel

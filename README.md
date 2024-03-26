@@ -48,6 +48,7 @@ NSUIButton
 NSUIColor
 NSUIEdgeInsets
 NSUIFont
+NSUIFontDescriptor
 NSUIHostingController
 NSUIImage
 NSUILongPressGestureRecognizer
