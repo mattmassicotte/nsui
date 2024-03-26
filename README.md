@@ -77,6 +77,15 @@ public protocol NSUIViewRepresentable {
     func makeNSUIView(context: Context) -> NSUIViewType
     func updateNSUIView(_ view: NSUIViewType, context: Context)
 }
+
+public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable {
+	associatedtype NSUIViewControllerType
+
+	@MainActor
+	func makeNSUIViewController(context: Context) -> NSUIViewControllerType
+	@MainActor
+	func updateNSUIViewController(_ viewController: NSUIViewControllerType, context: Context)
+}
 ```
 
 ## Conventions
