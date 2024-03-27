@@ -12,6 +12,7 @@ struct RepresentedView: NSUIViewRepresentable {
 }
 
 final class ViewRepresentableTests: XCTestCase {
+	@MainActor
 	func testViewStructDefinition() throws {
 		let _ = RepresentedView()
 	}
