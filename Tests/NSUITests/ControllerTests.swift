@@ -5,6 +5,7 @@ final class MyController: NSUIViewController {
 }
 
 final class ControllerTests: XCTestCase {
+	@MainActor
 	func testControllerClassDefinition() throws {
 		let _ = MyController()
 	}

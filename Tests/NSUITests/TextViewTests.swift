@@ -2,6 +2,7 @@ import XCTest
 @testable import NSUI
 
 final class TextViewTests: XCTestCase {
+	@MainActor
     func testTextViewText() throws {
         let textView = NSUITextView()
 
@@ -10,6 +11,7 @@ final class TextViewTests: XCTestCase {
 		XCTAssertEqual(textView.text, "abc")
     }
 
+	@MainActor
 	func testEditActions() throws {
 		let edit = NSUITextStorageEditActions.editedAttributes
 

@@ -1,6 +1,7 @@
 import XCTest
 @testable import NSUI
 
+@MainActor
 struct RepresentedView: NSUIViewRepresentable {
 	typealias NSUIViewType = NSUIView
 	
