@@ -1,5 +1,5 @@
 import XCTest
-@testable import NSUI
+import NSUI
 
 @MainActor
 struct RepresentedViewController: NSUIViewControllerRepresentable {

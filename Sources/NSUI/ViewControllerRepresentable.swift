@@ -39,7 +39,6 @@ public extension NSUIViewControllerRepresentable {
 	func sizeThatFits(_ proposal: ProposedViewSize, nsViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize? {
 		sizeThatFits(proposal, nsUIViewController: nsViewController, context: context)
 	}
-
 }
 
 #elseif canImport(UIKit)
@@ -89,12 +88,12 @@ public extension NSUIViewControllerRepresentable {
 
 extension NSUIViewControllerRepresentable {
 	@MainActor
-	static func dismantleNSUIViewController(_ viewController: Self.NSUIViewControllerType, coordinator: Self.Coordinator) {
+	public static func dismantleNSUIViewController(_ viewController: Self.NSUIViewControllerType, coordinator: Self.Coordinator) {
 	}
 
 	@available(iOS 16.0, tvOS 16.0, macOS 13.0, *)
 	@MainActor
-	func sizeThatFits(_ proposal: ProposedViewSize, nsUIViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize? {
+	public func sizeThatFits(_ proposal: ProposedViewSize, nsUIViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize? {
 		nil
 	}
 }
