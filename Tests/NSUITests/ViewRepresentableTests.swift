@@ -1,10 +1,8 @@
 import XCTest
-@testable import NSUI
+import NSUI
 
 @MainActor
 struct RepresentedView: NSUIViewRepresentable {
-	typealias NSUIViewType = NSUIView
-	
 	func makeNSUIView(context: Context) -> NSUIView {
 		NSUIView()
 	}

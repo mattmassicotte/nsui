@@ -3,13 +3,11 @@ import NSUI
 
 @MainActor
 struct RepresentedViewController: NSUIViewControllerRepresentable {
-	typealias NSUIViewControllerType = NSUIViewController
-
-	func makeNSUIViewController(context: Context) -> NSUIViewControllerType {
+	func makeNSUIViewController(context: Context) -> NSUIViewController {
 		NSUIViewControllerType(nibName: nil, bundle: nil)
 	}
 
-	func updateNSUIViewController(_ viewController: NSUIViewControllerType, context: Context) {
+	func updateNSUIViewController(_ viewController: NSUIViewController, context: Context) {
 	}
 
 	final class Coordinator {}

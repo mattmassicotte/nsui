@@ -1,7 +1,7 @@
 import SwiftUI
 
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-public protocol NSUIViewControllerRepresentable: NSViewControllerRepresentable {
+public protocol NSUIViewControllerRepresentable: NSViewControllerRepresentable where NSViewControllerType == NSUIViewControllerType {
 	associatedtype NSUIViewControllerType: NSUIViewController
 
 	@MainActor
@@ -42,7 +42,7 @@ public extension NSUIViewControllerRepresentable {
 }
 
 #elseif canImport(UIKit)
-public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable {
+public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable where UIViewControllerType == NSUIViewControllerType {
 	associatedtype NSUIViewControllerType: NSUIViewController
 
 	@MainActor
@@ -75,6 +75,7 @@ public extension NSUIViewControllerRepresentable {
 		Self.dismantleNSUIViewController(viewController, coordinator: coordinator)
 	}
 
+	@available(iOS 16.0, tvOS 16.0, *)
 	@MainActor
 	func sizeThatFits(
 		_ proposal: ProposedViewSize,
