@@ -9,6 +9,13 @@ public protocol NSUIViewControllerRepresentable: NSViewControllerRepresentable {
 
 	@MainActor
 	func updateNSUIViewController(_ viewController: Self.NSUIViewControllerType, context: Self.Context)
+
+	@MainActor
+	static func dismantleNSUIViewController(_ viewController: Self.NSUIViewControllerType, coordinator: Self.Coordinator)
+
+	@available(macOS 13.0, *)
+	@MainActor
+	func sizeThatFits(_ proposal: ProposedViewSize, nsUIViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize?
 }
 
 public extension NSUIViewControllerRepresentable {
@@ -21,7 +28,20 @@ public extension NSUIViewControllerRepresentable {
 	func updateNSViewController(_ viewController: Self.NSUIViewControllerType, context: Self.Context) {
 		updateNSUIViewController(viewController, context: context)
 	}
+
+	@MainActor
+	static func dismantleNSViewController(_ viewController: Self.NSUIViewControllerType, coordinator: Self.Coordinator) {
+		Self.dismantleNSUIViewController(viewController, coordinator: coordinator)
+	}
+
+	@available(macOS 13.0, *)
+	@MainActor
+	func sizeThatFits(_ proposal: ProposedViewSize, nsViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize? {
+		sizeThatFits(proposal, nsUIViewController: nsViewController, context: context)
+	}
+
 }
+
 #elseif canImport(UIKit)
 public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable {
 	associatedtype NSUIViewControllerType: NSUIViewController
@@ -31,6 +51,13 @@ public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable {
 
 	@MainActor
 	func updateNSUIViewController(_ viewController: Self.NSUIViewControllerType, context: Self.Context)
+
+	@MainActor
+	static func dismantleNSUIViewController(_ viewController: Self.NSUIViewControllerType, coordinator: Self.Coordinator)
+
+	@available(iOS 16.0, tvOS 16.0, *)
+	@MainActor
+	func sizeThatFits(_ proposal: ProposedViewSize, nsUIViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize?
 }
 
 public extension NSUIViewControllerRepresentable {
@@ -43,6 +70,31 @@ public extension NSUIViewControllerRepresentable {
 	func updateUIViewController(_ viewController: Self.NSUIViewControllerType, context: Self.Context) {
 		updateNSUIViewController(viewController, context: context)
 	}
+
+	@MainActor
+	static func dismantleUIViewController(_ viewController: Self.NSUIViewControllerType, coordinator: Self.Coordinator) {
+		Self.dismantleNSUIViewController(viewController, coordinator: coordinator)
+	}
+
+	@MainActor
+	func sizeThatFits(
+		_ proposal: ProposedViewSize,
+		uiViewController: Self.NSUIViewControllerType,
+		context: Self.Context
+	) -> CGSize? {
+		sizeThatFits(proposal, nsUIViewController: uiViewController, context: context)
+	}
 }
 #endif
 
+extension NSUIViewControllerRepresentable {
+	@MainActor
+	static func dismantleNSUIViewController(_ viewController: Self.NSUIViewControllerType, coordinator: Self.Coordinator) {
+	}
+
+	@available(iOS 16.0, tvOS 16.0, macOS 13.0, *)
+	@MainActor
+	func sizeThatFits(_ proposal: ProposedViewSize, nsUIViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize? {
+		nil
+	}
+}
