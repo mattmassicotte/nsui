@@ -88,6 +88,15 @@ public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable {
 }
 ```
 
+## Cross-Platform Wrappers
+
+There are cases where it is necessary to provide cross-platform wrappers around functions, acessors, or initializers.
+
+```swift
+Color(nsuiColor: NSUIColor)
+Image(nsuiImage: NSUIImage)
+```
+
 ## Conventions
 NSUI is not a multi-platform framework to replace both UIKit and AppKit. As stated above, `NSUI` takes the stance that
 the API from `UIKit` is the first-class citizen. However, in some cases, both AppKit and UIKit are very close to each other. 
