@@ -1,15 +1,13 @@
 import SwiftUI
 
 extension Image {
+	public init(nsuiImage: NSUIImage) {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-	public init(nsuiImage: NSUIImage) {
 		self.init(nsImage: nsuiImage)
-	}
 #elseif canImport(UIKit)
-	public init(nsuiImage: NSUIImage) {
 		self.init(uiImage: nsuiImage)
-	}
 #endif
+	}
 }
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
