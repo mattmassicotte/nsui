@@ -9,6 +9,12 @@ struct RepresentedView: NSUIViewRepresentable {
 
 	func updateNSUIView(_ uiView: NSUIView, context: Context) {
 	}
+
+	final class Coordinator {}
+
+	func makeCoordinator() -> Coordinator {
+		Coordinator()
+	}
 }
 
 final class ViewRepresentableTests: XCTestCase {

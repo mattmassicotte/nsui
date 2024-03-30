@@ -15,7 +15,7 @@ public protocol NSUIViewControllerRepresentable: NSViewControllerRepresentable w
 
 	@available(macOS 13.0, *)
 	@MainActor
-	func sizeThatFits(_ proposal: ProposedViewSize, nsUIViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize?
+	func sizeThatFits(_ proposal: ProposedViewSize, nsuiViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize?
 }
 
 public extension NSUIViewControllerRepresentable {
@@ -37,7 +37,7 @@ public extension NSUIViewControllerRepresentable {
 	@available(macOS 13.0, *)
 	@MainActor
 	func sizeThatFits(_ proposal: ProposedViewSize, nsViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize? {
-		sizeThatFits(proposal, nsUIViewController: nsViewController, context: context)
+		sizeThatFits(proposal, nsuiViewController: nsViewController, context: context)
 	}
 }
 
@@ -56,7 +56,7 @@ public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable w
 
 	@available(iOS 16.0, tvOS 16.0, *)
 	@MainActor
-	func sizeThatFits(_ proposal: ProposedViewSize, nsUIViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize?
+	func sizeThatFits(_ proposal: ProposedViewSize, nsuiViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize?
 }
 
 public extension NSUIViewControllerRepresentable {
@@ -82,7 +82,7 @@ public extension NSUIViewControllerRepresentable {
 		uiViewController: Self.NSUIViewControllerType,
 		context: Self.Context
 	) -> CGSize? {
-		sizeThatFits(proposal, nsUIViewController: uiViewController, context: context)
+		sizeThatFits(proposal, nsuiViewController: uiViewController, context: context)
 	}
 }
 #endif
@@ -94,7 +94,7 @@ extension NSUIViewControllerRepresentable {
 
 	@available(iOS 16.0, tvOS 16.0, macOS 13.0, *)
 	@MainActor
-	public func sizeThatFits(_ proposal: ProposedViewSize, nsUIViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize? {
+	public func sizeThatFits(_ proposal: ProposedViewSize, nsuiViewController: Self.NSUIViewControllerType, context: Self.Context) -> CGSize? {
 		nil
 	}
 }
