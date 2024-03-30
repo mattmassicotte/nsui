@@ -1,5 +1,14 @@
 import XCTest
-@testable import NSUI
+import NSUI
+
+final class StorageDelegate: NSObject, NSTextStorageDelegate {
+	func textStorage(_ textStorage: NSTextStorage, willProcessEditing editedMask: NSTextStorage.EditActions, range editedRange: NSRange, changeInLength delta: Int) {
+
+	}
+
+	func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorage.EditActions, range editedRange: NSRange, changeInLength delta: Int) {
+	}
+}
 
 final class TextViewTests: XCTestCase {
 	@MainActor
@@ -13,7 +22,7 @@ final class TextViewTests: XCTestCase {
 
 	@MainActor
 	func testEditActions() throws {
-		let edit = NSUITextStorageEditActions.editedAttributes
+		let edit = NSTextStorage.EditActions.editedAttributes
 
 		XCTAssertTrue(edit.contains(.editedAttributes))
 	}

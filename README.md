@@ -58,7 +58,6 @@ NSUIResponder
 NSUIStackView
 NSUIStoryboard
 NSUITapGestureRecognizer
-NSUITextStorageEditActions
 NSUITextField
 NSUITextFieldDelegate
 NSUITextView
