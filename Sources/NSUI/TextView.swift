@@ -9,6 +9,7 @@ extension NSTextStorage {
 public typealias NSUITextStorageEditActions = NSTextStorageEditActions
 
 extension NSTextView {
+	/// A wrapper for the `string` property.
 	public var text: String {
 		get { return string }
 		set { string = newValue }
