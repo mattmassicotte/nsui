@@ -1,7 +1,6 @@
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import AppKit
 
-typealias NSUIFontDescriptor = NSFontDescriptor
 extension NSUIFontDescriptor.SymbolicTraits {
 	public static let traitItalic = Self.italic
 	public static let traitBold = Self.bold

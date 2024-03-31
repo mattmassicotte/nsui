@@ -25,6 +25,7 @@ public typealias NSUICollectionViewDelegateFlowLayout = NSCollectionViewDelegate
 public typealias NSUIColor = NSColor
 public typealias NSUIEdgeInsets = NSEdgeInsets
 public typealias NSUIFont = NSFont
+public typealias NSUIFontDescriptor = NSFontDescriptor
 public typealias NSUIImage = NSImage
 public typealias NSUIImageView = NSImageView
 public typealias NSUILabel = NSTextField
