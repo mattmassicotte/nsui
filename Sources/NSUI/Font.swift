@@ -8,7 +8,8 @@ extension NSUIFontDescriptor.SymbolicTraits {
 	public static let traitCondensed = Self.condensed
 	public static let traitMonoSpace = Self.monoSpace
 }
-
+#elseif canImport(UIKit)
+import UIKit
 #endif
 
 extension NSUIFontDescriptor {
