@@ -97,6 +97,8 @@ Color(nsuiColor: NSUIColor)
 Image(nsuiImage: NSUIImage)
 
 // AppKit/UIKit
+NSUIFont.init(nsuiDescriptor:, size:)
+NSUIFontDescriptor.nsuiWithSymbolicTraits(_:)
 NSUITextView.nsuiLayoutManager
 ```
 
