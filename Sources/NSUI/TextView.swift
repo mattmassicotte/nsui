@@ -23,3 +23,12 @@ import UIKit
 public typealias NSUITextStorageEditActions = NSTextStorage.EditActions
 
 #endif
+
+extension NSUITextView {
+	/// NSUI wrapper around `layoutManager` property.
+	///
+	/// This value can be nil on macOS.
+	public var nsuiLayoutManager: NSLayoutManager? {
+		layoutManager
+	}
+}

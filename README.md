@@ -89,11 +89,15 @@ public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable {
 
 ## Cross-Platform Wrappers
 
-There are cases where it is necessary to provide cross-platform wrappers around functions, acessors, or initializers.
+There are cases where it is necessary to provide cross-platform wrappers around functions, accessors, or initializers.
 
 ```swift
+// SwiftUI
 Color(nsuiColor: NSUIColor)
 Image(nsuiImage: NSUIImage)
+
+// AppKit/UIKit
+NSUITextView.nsuiLayoutManager
 ```
 
 ## Conventions
@@ -122,7 +126,7 @@ If you need to enhance `NSUI`, follow the following guidelines:
 
 1. Check if the type you need is defined in the `Aliases.swift` file.
 2. If your type needs to bridging functions, define them in a dedicated file.
-3. Prioritize `UIKit` implemenations, unless type-mismatches prevent it.
+3. Prioritize `UIKit` implementations, unless type-mismatches prevent it.
 
 ## Alternatives
 
