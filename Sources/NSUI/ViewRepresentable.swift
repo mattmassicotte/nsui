@@ -1,8 +1,6 @@
 import SwiftUI
 
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-import AppKit
-
 public protocol NSUIViewRepresentable: NSViewRepresentable {
 	associatedtype NSUIViewType: NSView
 
@@ -39,8 +37,6 @@ public extension NSUIViewRepresentable {
 }
 
 #elseif canImport(UIKit)
-import UIKit
-
 public protocol NSUIViewRepresentable: UIViewRepresentable {
 	associatedtype NSUIViewType: UIView
 

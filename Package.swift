@@ -16,7 +16,7 @@ let package = Package(
 	dependencies: [
 	],
 	targets: [
-		.target(name: "NSUI", dependencies: []),
+		.target(name: "NSUI"),
 		.testTarget(name: "NSUITests", dependencies: ["NSUI"]),
 	]
 )

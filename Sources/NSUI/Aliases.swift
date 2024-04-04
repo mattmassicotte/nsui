@@ -1,8 +1,6 @@
 import SwiftUI
 
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-import AppKit
-
 public typealias NSUIActivityIndicatorView = NSProgressIndicator
 public typealias NSUIApplication = NSApplication
 public typealias NSUIApplicationDelegate = NSApplicationDelegate
@@ -47,8 +45,6 @@ public typealias NSUIHostingController = NSHostingController
 public typealias NSUIWorkspace = NSWorkspace
 
 #elseif canImport(UIKit)
-import UIKit
-
 public typealias NSUIActivityIndicatorView = UIActivityIndicatorView
 public typealias NSUIApplication = UIApplication
 public typealias NSUIApplicationDelegate = UIApplicationDelegate

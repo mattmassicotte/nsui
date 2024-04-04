@@ -23,6 +23,31 @@ dependencies: [
 ]
 ```
 
+## Usage
+
+```swift
+// not only does this import the NSUI package, but it also will correctly make either AppKit or UIKit accessible depending on the build target platform.
+import NSUI
+
+// Make use of the cross-platform wrappers
+let textView = NSUITextView()
+```
+
+There are cases where it is necessary to provide cross-platform wrappers around functions, accessors, or initializers. These account for type differences, including cases where value differ only in optionality.
+
+```swift
+// SwiftUI
+Color(nsuiColor: NSUIColor)
+Image(nsuiImage: NSUIImage)
+
+// AppKit/UIKit
+NSUIFont.init(nsuiDescriptor:, size:)
+NSUIFontDescriptor.nsuiWithSymbolicTraits(_:)
+NSUITextView.nsuiLayoutManager
+```
+
+NSUI also includes both `NSUIViewRepresentable` and `NSUIViewControllerRepresentable` to wrap your custom view subclasses.
+
 ## Types
 All Types and their `UIKit` & `AppKit` correspondance are defined in the `Aliases.swift` file. That file only defines the 
 NSUI type corresponding to the proper platform. 
@@ -66,41 +91,6 @@ NSUIWorkspace
 ```
 
 If you are looking for event key mappings, particularly `UIKeyboardHIDUsage` and `UIKeyModifierFlags`, check out [KeyCodes](https://github.com/ChimeHQ/KeyCodes).
-
-## Protocols
-
-```swift
-public protocol NSUIViewRepresentable {
-    associatedtype NSUIViewType
-
-    func makeNSUIView(context: Context) -> NSUIViewType
-    func updateNSUIView(_ view: NSUIViewType, context: Context)
-}
-
-public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable {
-	associatedtype NSUIViewControllerType
-
-	@MainActor
-	func makeNSUIViewController(context: Context) -> NSUIViewControllerType
-	@MainActor
-	func updateNSUIViewController(_ viewController: NSUIViewControllerType, context: Context)
-}
-```
-
-## Cross-Platform Wrappers
-
-There are cases where it is necessary to provide cross-platform wrappers around functions, accessors, or initializers.
-
-```swift
-// SwiftUI
-Color(nsuiColor: NSUIColor)
-Image(nsuiImage: NSUIImage)
-
-// AppKit/UIKit
-NSUIFont.init(nsuiDescriptor:, size:)
-NSUIFontDescriptor.nsuiWithSymbolicTraits(_:)
-NSUITextView.nsuiLayoutManager
-```
 
 ## Conventions
 NSUI is not a multi-platform framework to replace both UIKit and AppKit. As stated above, `NSUI` takes the stance that
