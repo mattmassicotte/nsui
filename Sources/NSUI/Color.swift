@@ -10,3 +10,13 @@ extension Color {
 #endif
 	}
 }
+
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+extension NSColor {
+	/// Alias for `textColor` on macOS.
+	public static let label = textColor
+
+	/// Alias for `windowBackgroundColor` on macOS.
+	public static let systemBackground = windowBackgroundColor
+}
+#endif

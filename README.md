@@ -39,6 +39,7 @@ There are cases where it is necessary to provide cross-platform wrappers around 
 // SwiftUI
 Color(nsuiColor: NSUIColor)
 Image(nsuiImage: NSUIImage)
+NSUIControlActiveState
 
 // AppKit/UIKit
 NSUIFont.init(nsuiDescriptor:, size:)
