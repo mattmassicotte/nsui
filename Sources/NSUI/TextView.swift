@@ -27,4 +27,12 @@ extension NSUITextView {
 	public var nsuiLayoutManager: NSLayoutManager? {
 		layoutManager
 	}
+
+	public var nsuiSelectedRange: NSRange {
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+		selectedRange()
+#else
+		selectedRange
+#endif
+	}
 }

@@ -45,6 +45,7 @@ NSUIControlActiveState
 NSUIFont.init(nsuiDescriptor:, size:)
 NSUIFontDescriptor.nsuiWithSymbolicTraits(_:)
 NSUITextView.nsuiLayoutManager
+NSUITextView.nsuiSelectedRange
 ```
 
 NSUI also includes both `NSUIViewRepresentable` and `NSUIViewControllerRepresentable` to wrap your custom view subclasses.

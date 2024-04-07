@@ -26,4 +26,13 @@ final class TextViewTests: XCTestCase {
 
 		XCTAssertTrue(edit.contains(.editedAttributes))
 	}
+
+	@MainActor
+	func testSelectedRanges() throws {
+		let textView = NSUITextView()
+
+		let _ = textView.nsuiSelectedRange
+
+		XCTAssertTrue(true)
+	}
 }
