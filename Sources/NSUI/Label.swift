@@ -10,6 +10,12 @@ public extension NSUILabel {
             stringValue = newValue
         }
     }
+
+	var attributedText: NSAttributedString {
+		get { attributedStringValue }
+		set { attributedStringValue = newValue }
+	}
+
     var textAlignment: NSTextAlignment {
         get {
             return alignment
