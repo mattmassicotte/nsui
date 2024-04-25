@@ -6,7 +6,7 @@ public typealias NSUIApplication = NSApplication
 public typealias NSUIApplicationDelegate = NSApplicationDelegate
 @available(macOS 11.0, *)
 public typealias NSUIApplicationDelegateAdaptor = NSApplicationDelegateAdaptor
-
+public typealias NSUIBezierPath = NSBezierPath
 // Storyboard
 public typealias NSUIStoryboard = NSStoryboard
 
@@ -50,6 +50,7 @@ public typealias NSUIApplication = UIApplication
 public typealias NSUIApplicationDelegate = UIApplicationDelegate
 @available(iOS 14.0, tvOS 14.0, *)
 public typealias NSUIApplicationDelegateAdaptor = UIApplicationDelegateAdaptor
+public typealias NSUIBezierPath = UIBezierPath
 
 // Storyboard
 @available(visionOS, introduced: 1.0, deprecated)

@@ -60,6 +60,7 @@ NSUIActivityIndicatorView
 NSUIApplication
 NSUIApplicationDelegate
 NSUIApplicationDelegateAdaptor
+NSUIBezierPath
 
 // Collection Views
 NSUICollectionDataSource
