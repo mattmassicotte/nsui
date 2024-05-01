@@ -23,4 +23,10 @@ extension NSUIActivityIndicatorView {
 final class NSUIHostingView<Content: View>: UIView {
 }
 
+extension UIView {
+	public var visibleRect: CGRect {
+		superview?.bounds.intersection(frame) ?? .zero
+	}
+}
+
 #endif
