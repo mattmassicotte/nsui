@@ -32,9 +32,12 @@ public typealias NSUINib = NSNib
 public typealias NSUIPasteboard = NSPasteboard
 public typealias NSUIResponder = NSResponder
 public typealias NSUITapGestureRecognizer = NSClickGestureRecognizer
+@available(macOS 11.0, *)
+public typealias NSUITableViewDiffableDataSource = NSTableViewDiffableDataSource
 
 // Views
 public typealias NSUIButton = NSButton
+public typealias NSUITableView = NSTableView
 public typealias NSUITextField = NSTextField
 public typealias NSUITextFieldDelegate = NSTextFieldDelegate
 public typealias NSUITextView = NSTextView
@@ -81,9 +84,11 @@ public typealias NSUINib = UINib
 public typealias NSUIPasteboard = UIPasteboard
 public typealias NSUIResponder = UIResponder
 public typealias NSUITapGestureRecognizer = UITapGestureRecognizer
+public typealias NSUITableViewDiffableDataSource = UITableViewDiffableDataSource
 
 // Views
 public typealias NSUIButton = UIButton
+public typealias NSUITableView = UITableView
 public typealias NSUITextField = UITextField
 public typealias NSUITextFieldDelegate = UITextFieldDelegate
 public typealias NSUITextView = UITextView

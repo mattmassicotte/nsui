@@ -85,6 +85,8 @@ NSUIPasteboard
 NSUIResponder
 NSUIStackView
 NSUIStoryboard
+NSUITableView
+NSUITableViewDiffableDataSource
 NSUITapGestureRecognizer
 NSUITextField
 NSUITextFieldDelegate
