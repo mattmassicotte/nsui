@@ -13,6 +13,11 @@ There are small differences between otherwise-source-compatible classes in AppKi
 
 When in doubt, UIKit wins. This keeps things familiar to the most people.
 
+Other libraries you might like:
+
+- [ColorToolbox](https://github.com/raymondjavaxx/ColorToolbox): AppKit/UIKit-compatible Color abstraction and utilities
+- [KeyCodes](https://github.com/ChimeHQ/KeyCodes): AppKit Carbon key codes to UIKey-compatible enums
+
 ## Integration
 
 Swift Package Manager:
@@ -94,8 +99,6 @@ NSUITextView
 NSUIViewController
 NSUIWorkspace
 ```
-
-If you are looking for event key mappings, particularly `UIKeyboardHIDUsage` and `UIKeyModifierFlags`, check out [KeyCodes](https://github.com/ChimeHQ/KeyCodes).
 
 ## Conventions
 NSUI is not a multi-platform framework to replace both UIKit and AppKit. As stated above, `NSUI` takes the stance that
