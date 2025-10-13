@@ -18,5 +18,8 @@ extension NSColor {
 
 	/// Alias for `windowBackgroundColor` on macOS.
 	public static let systemBackground = windowBackgroundColor
+
+	/// Alias for `separatorColor` on macOS.
+	public static let separator = separatorColor
 }
 #endif
