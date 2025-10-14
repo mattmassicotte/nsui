@@ -30,7 +30,6 @@ jobs:
           - "platform=macOS,variant=Mac Catalyst"
           - "platform=iOS Simulator,name=iPhone 16e,OS=26.0"
           - "platform=tvOS Simulator,name=Apple TV,OS=26.0"
-          - "platform=watchOS Simulator,name=Apple Watch Series 11 (42mm),OS=26.0"
           - "platform=visionOS Simulator,name=Apple Vision Pro,OS=26.0"
     steps:
       - uses: actions/checkout@v4
