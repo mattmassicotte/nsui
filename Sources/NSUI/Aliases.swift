@@ -54,48 +54,41 @@ public typealias NSUIApplicationDelegate = UIApplicationDelegate
 @available(iOS 14.0, tvOS 14.0, *)
 public typealias NSUIApplicationDelegateAdaptor = UIApplicationDelegateAdaptor
 public typealias NSUIBezierPath = UIBezierPath
-
-// Storyboard
-@available(visionOS, introduced: 1.0, deprecated)
-public typealias NSUIStoryboard = UIStoryboard
-
-// Collection View
+public typealias NSUIButton = UIButton
 public typealias NSUICollectionDataSource = UICollectionViewDataSource
 public typealias NSUICollectionView = UICollectionView
-public typealias NSUICollectionViewItem = UICollectionViewCell
 public typealias NSUICollectionViewDelegate = UICollectionViewDelegate
-public typealias NSUICollectionViewLayout = UICollectionViewLayout
-public typealias NSUICollectionViewFlowLayout = UICollectionViewFlowLayout
-public typealias NSUICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes
 public typealias NSUICollectionViewDelegateFlowLayout = UICollectionViewDelegateFlowLayout
-
+public typealias NSUICollectionViewFlowLayout = UICollectionViewFlowLayout
+public typealias NSUICollectionViewItem = UICollectionViewCell
+public typealias NSUICollectionViewLayout = UICollectionViewLayout
+public typealias NSUICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes
 public typealias NSUIColor = UIColor
 public typealias NSUIEdgeInsets = UIEdgeInsets
 public typealias NSUIFont = UIFont
 public typealias NSUIFontDescriptor = UIFontDescriptor
+public typealias NSUIHostingController = UIHostingController
 public typealias NSUIImage = UIImage
 public typealias NSUIImageView = UIImageView
 public typealias NSUILabel = UILabel
 public typealias NSUILongPressGestureRecognizer = UILongPressGestureRecognizer
 @available(visionOS, introduced: 1.0, deprecated)
 public typealias NSUINib = UINib
-
 @available(tvOS, unavailable)
 public typealias NSUIPasteboard = UIPasteboard
 public typealias NSUIResponder = UIResponder
+public typealias NSUIScrollView = UIScrollView
+public typealias NSUIStackView = UIStackView
+@available(visionOS, introduced: 1.0, deprecated)
+public typealias NSUIStoryboard = UIStoryboard
 public typealias NSUITapGestureRecognizer = UITapGestureRecognizer
 public typealias NSUITableViewDiffableDataSource = UITableViewDiffableDataSource
-
-// Views
-public typealias NSUIButton = UIButton
 public typealias NSUITableView = UITableView
 public typealias NSUITextField = UITextField
 public typealias NSUITextFieldDelegate = UITextFieldDelegate
 public typealias NSUITextView = UITextView
 public typealias NSUIView = UIView
-public typealias NSUIStackView = UIStackView
 public typealias NSUIViewController = UIViewController
-public typealias NSUIHostingController = UIHostingController
 public typealias NSUIWorkspace = UIApplication
 
 #endif
