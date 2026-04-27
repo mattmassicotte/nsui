@@ -36,7 +36,7 @@ public extension NSUIViewRepresentable {
 	}
 }
 
-#elseif canImport(UIKit)
+#elseif canImport(UIKit) && !os(watchOS)
 public protocol NSUIViewRepresentable: UIViewRepresentable {
 	associatedtype NSUIViewType: UIView
 
@@ -74,6 +74,7 @@ public extension NSUIViewRepresentable {
 
 #endif
 
+#if !os(watchOS)
 extension NSUIViewRepresentable {
 	@MainActor
 	public static func dismantleNSUIView(_ view: Self.NSUIViewType, coordinator: Self.Coordinator) {
@@ -85,3 +86,4 @@ extension NSUIViewRepresentable {
 		nil
 	}
 }
+#endif

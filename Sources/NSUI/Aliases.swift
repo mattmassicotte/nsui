@@ -41,12 +41,12 @@ public typealias NSUIView = NSView
 public typealias NSUIViewController = NSViewController
 public typealias NSUIWorkspace = NSWorkspace
 #elseif canImport(UIKit)
+#if !os(watchOS)
 public typealias NSUIActivityIndicatorView = UIActivityIndicatorView
 public typealias NSUIApplication = UIApplication
 public typealias NSUIApplicationDelegate = UIApplicationDelegate
 @available(iOS 14.0, tvOS 14.0, *)
 public typealias NSUIApplicationDelegateAdaptor = UIApplicationDelegateAdaptor
-public typealias NSUIBezierPath = UIBezierPath
 public typealias NSUIButton = UIButton
 public typealias NSUICollectionDataSource = UICollectionViewDataSource
 public typealias NSUICollectionView = UICollectionView
@@ -56,12 +56,7 @@ public typealias NSUICollectionViewFlowLayout = UICollectionViewFlowLayout
 public typealias NSUICollectionViewItem = UICollectionViewCell
 public typealias NSUICollectionViewLayout = UICollectionViewLayout
 public typealias NSUICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes
-public typealias NSUIColor = UIColor
-public typealias NSUIEdgeInsets = UIEdgeInsets
-public typealias NSUIFont = UIFont
-public typealias NSUIFontDescriptor = UIFontDescriptor
 public typealias NSUIHostingController = UIHostingController
-public typealias NSUIImage = UIImage
 public typealias NSUIImageView = UIImageView
 public typealias NSUILabel = UILabel
 public typealias NSUILongPressGestureRecognizer = UILongPressGestureRecognizer
@@ -83,4 +78,12 @@ public typealias NSUITextView = UITextView
 public typealias NSUIView = UIView
 public typealias NSUIViewController = UIViewController
 public typealias NSUIWorkspace = UIApplication
+#endif
+
+public typealias NSUIBezierPath = UIBezierPath
+public typealias NSUIColor = UIColor
+public typealias NSUIEdgeInsets = UIEdgeInsets
+public typealias NSUIFont = UIFont
+public typealias NSUIFontDescriptor = UIFontDescriptor
+public typealias NSUIImage = UIImage
 #endif

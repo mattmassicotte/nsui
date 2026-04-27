@@ -38,7 +38,7 @@ public extension NSUIViewControllerRepresentable {
 	}
 }
 
-#elseif canImport(UIKit)
+#elseif canImport(UIKit) && !os(watchOS)
 public protocol NSUIViewControllerRepresentable: UIViewControllerRepresentable where UIViewControllerType == NSUIViewControllerType {
 	associatedtype NSUIViewControllerType: NSUIViewController
 
@@ -81,6 +81,7 @@ public extension NSUIViewControllerRepresentable {
 }
 #endif
 
+#if !os(watchOS)
 @MainActor
 extension NSUIViewControllerRepresentable {
 	public static func dismantleNSUIViewController(_ viewController: Self.NSUIViewControllerType, coordinator: Self.Coordinator) {
@@ -91,3 +92,4 @@ extension NSUIViewControllerRepresentable {
 		nil
 	}
 }
+#endif

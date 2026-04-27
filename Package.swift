@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 6.0
 
 import PackageDescription
 
@@ -9,6 +9,8 @@ let package = Package(
 		.macCatalyst(.v13),
 		.iOS(.v13),
 		.tvOS(.v13),
+		.watchOS(.v6),
+		.visionOS(.v1),
 	],
 	products: [
 		.library(name: "NSUI", targets: ["NSUI"]),
@@ -20,13 +22,3 @@ let package = Package(
 		.testTarget(name: "NSUITests", dependencies: ["NSUI"]),
 	]
 )
-
-let swiftSettings: [SwiftSetting] = [
-	.enableExperimentalFeature("StrictConcurrency"),
-]
-
-for target in package.targets {
-	var settings = target.swiftSettings ?? []
-	settings.append(contentsOf: swiftSettings)
-	target.swiftSettings = settings
-}

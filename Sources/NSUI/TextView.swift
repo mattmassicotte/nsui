@@ -14,7 +14,7 @@ extension NSTextView {
 	}
 }
 
-#elseif canImport(UIKit)
+#elseif canImport(UIKit) && !os(watchOS)
 @available(*, deprecated, renamed: "NSTextStorage.EditActions")
 public typealias NSUITextStorageEditActions = NSTextStorage.EditActions
 
@@ -34,6 +34,7 @@ extension NSLayoutManager {
 
 #endif
 
+#if !os(watchOS)
 extension NSUITextView {
 	/// NSUI wrapper around `layoutManager` property.
 	///
@@ -86,3 +87,4 @@ extension NSUITextView {
 	}
 #endif
 }
+#endif
