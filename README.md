@@ -9,7 +9,9 @@
 # NSUI
 AppKit and UIKit without conditional compilation
 
-There are small differences between otherwise-source-compatible classes in AppKit and UIKit and it drives everyone bananas. I was inspired by [Nick Lockwood](https://gist.github.com/nicklockwood/19569dc738b565c67f4d97302bf48697) to make this into a package.
+There are small differences between otherwise-compatible classes in AppKit and UIKit and it drives everyone bananas. I was inspired by [Nick Lockwood](https://gist.github.com/nicklockwood/19569dc738b565c67f4d97302bf48697) to make this into a package.
+
+In general, the goal here is pure source compatibility. There are considerable platform-specific behavioral differences, and those are up to you to understand and account for.
 
 When in doubt, UIKit wins. This keeps things familiar to the most people.
 
@@ -17,6 +19,7 @@ Other libraries you might like:
 
 - [ColorToolbox](https://github.com/raymondjavaxx/ColorToolbox): AppKit/UIKit-compatible Color abstraction and utilities
 - [KeyCodes](https://github.com/ChimeHQ/KeyCodes): AppKit Carbon key codes to UIKey-compatible enums
+- [Ligature](https://github.com/ChimeHQ/Ligature): AppKit/UIKit-compatible UITextInputTokenizer and text system support
 
 ## Integration
 
@@ -24,7 +27,7 @@ Swift Package Manager:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/mattmassicotte/nsui")
+    .package(url: "https://github.com/mattmassicotte/NSUI", from: "1.2.0")
 ]
 ```
 
@@ -53,80 +56,9 @@ NSUITextView.nsuiLayoutManager
 NSUITextView.nsuiSelectedRange
 ```
 
-NSUI also includes both `NSUIViewRepresentable` and `NSUIViewControllerRepresentable` to wrap your custom view subclasses.
+## SwiftUI
 
-## Types
-All Types and their `UIKit` & `AppKit` correspondance are defined in the `Aliases.swift` file. That file only defines the 
-NSUI type corresponding to the proper platform. 
-
-Here's the current list of types supported in NSUI: 
-```
-NSUIActivityIndicatorView
-NSUIApplication
-NSUIApplicationDelegate
-NSUIApplicationDelegateAdaptor
-NSUIBezierPath
-
-// Collection Views
-NSUICollectionDataSource
-NSUICollectionView
-NSUICollectionViewItem
-NSUICollectionViewDelegate
-NSUICollectionViewLayout
-NSUICollectionViewFlowLayout
-NSUICollectionViewLayoutAttributes
-NSUICollectionViewDelegateFlowLayout
-
-NSUIButton
-NSUIColor
-NSUIEdgeInsets
-NSUIFont
-NSUIFontDescriptor
-NSUIHostingController
-NSUIImage
-NSUILongPressGestureRecognizer
-NSUINib
-NSUIPasteboard
-NSUIResponder
-NSUIStackView
-NSUIStoryboard
-NSUITableView
-NSUITableViewDiffableDataSource
-NSUITapGestureRecognizer
-NSUITextField
-NSUITextFieldDelegate
-NSUITextView
-NSUIViewController
-NSUIWorkspace
-```
-
-## Conventions
-NSUI is not a multi-platform framework to replace both UIKit and AppKit. As stated above, `NSUI` takes the stance that
-the API from `UIKit` is the first-class citizen. However, in some cases, both AppKit and UIKit are very close to each other. 
-
-Let's take, for example, the `NSProgressIndicator` and `UIActivityIndicator` classes. To start the spinning indicator view, you need to 
-issue `startAnimating()` for UIKit and `startAnimation(sender:)` for AppKit.
-
-In order to bridge that slight difference, a bridging function is created in the `Views.swift` file which looks like this: 
-```swift
-extension NSUIActivityIndicator {
-    public func startAnimating() {
-        self.startAnimation(nil)
-    }
-    
-    public func stopAnimating() {
-        self.stopAnimation(nil)
-    }
-}
-```
-This extension is wrapped within a: `#if canImport(AppKit)` and provides the `UIKit` functional equivalent to the `AppKit` class. 
-
-## Enhancing `NSUI`
-If you need to enhance `NSUI`, follow the following guidelines:
-
-1. Check if the type you need is defined in the `Aliases.swift` file.
-2. If your type needs to bridging functions, define them in a dedicated file.
-3. Prioritize `UIKit` implementations, unless type-mismatches prevent it.
+NSUI also includes both `NSUIViewRepresentable` and `NSUIViewControllerRepresentable` to expose your custom view subclasses in SwiftUI.
 
 ## Alternatives
 
