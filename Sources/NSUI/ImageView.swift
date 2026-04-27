@@ -1,6 +1,6 @@
 import SwiftUI
 
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if os(macOS)
 public extension NSImageView {
     var tintColor: NSUIColor {
         @available(*, unavailable)

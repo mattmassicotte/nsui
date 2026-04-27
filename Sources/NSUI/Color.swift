@@ -11,7 +11,7 @@ extension Color {
 	}
 }
 
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if os(macOS)
 extension NSColor {
 	/// Alias for `textColor` on macOS.
 	public static let label = textColor

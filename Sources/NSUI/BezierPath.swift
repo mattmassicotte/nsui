@@ -1,4 +1,4 @@
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if os(macOS)
 extension NSBezierPath {
     public func addLine(to point: CGPoint) {
         line(to: point)
