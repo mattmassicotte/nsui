@@ -1,6 +1,7 @@
 import XCTest
 @testable import NSUI
 
+#if !os(watchOS)
 final class MyController: NSUIViewController {
 }
 
@@ -10,3 +11,4 @@ final class ControllerTests: XCTestCase {
 		let _ = MyController()
 	}
 }
+#endif

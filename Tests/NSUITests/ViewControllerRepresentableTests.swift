@@ -1,6 +1,7 @@
 import XCTest
 import NSUI
 
+#if !os(watchOS)
 @MainActor
 struct RepresentedViewController: NSUIViewControllerRepresentable {
 	func makeNSUIViewController(context: Context) -> NSUIViewController {
@@ -24,3 +25,4 @@ final class ViewControllerRepresentableTests: XCTestCase {
 	}
 }
 
+#endif

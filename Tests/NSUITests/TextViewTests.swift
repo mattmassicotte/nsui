@@ -1,6 +1,7 @@
 import XCTest
 import NSUI
 
+#if !os(watchOS)
 final class StorageDelegate: NSObject, NSTextStorageDelegate {
 	func textStorage(_ textStorage: NSTextStorage, willProcessEditing editedMask: NSTextStorage.EditActions, range editedRange: NSRange, changeInLength delta: Int) {
 
@@ -36,3 +37,4 @@ final class TextViewTests: XCTestCase {
 		XCTAssertTrue(true)
 	}
 }
+#endif
